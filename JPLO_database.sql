@@ -46,7 +46,7 @@
  (
  lessonid int identity(1,1) primary key,
  name nvarchar not null,
- description nvarchar not null,
+ description nvarchar,
  teacherid int references teacher(teacherid),
  studentid int references student(studentid),
  )
@@ -94,5 +94,6 @@
 
  insert into admin values('Aoki Daisuke',1,'Admin', 123)
 
- insert into lesson values('
-
+ insert into lesson values('ひらがな', '', 1,1)
+ insert into lesson values('カタカナ', '', 1,1)
+ insert into lesson values('第１課', '', 1,1)
