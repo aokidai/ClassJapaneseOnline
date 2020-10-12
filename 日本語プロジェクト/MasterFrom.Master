@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterFrom.Master.cs" Inherits="日本語プロジェクト.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>オンラインサービス「みんなと一緒に日本語を勉強しましょう」公式サイト</title>
+    <link rel="icon" type="image/png" sizes="32x16" href="./image/star.PNG">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script type="text/javascript" src="./js/common.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="backgroud" background="./image/backgroud.jpg">
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <header id="header1">
+        
+    </header>
+    
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

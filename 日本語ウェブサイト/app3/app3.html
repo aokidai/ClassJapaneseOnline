@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>オンラインサービス「楓ちゃんと一緒に日本語を勉強しましょう」公式サイト</title>
+<link rel="icon" type="image/png" sizes="32x16" href="./image/star.PNG">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<script type="text/javascript" src="./js/common.js"></script>
+</head>
+<script>
+  window.setTimeout("showTime()", 1000);
+    function getVNTime(){
+    var time = new Date();
+    var dow = time.getDay();
+    if(dow==0)
+        dow = "日曜日";
+    else if (dow==1)
+        dow = "月曜日";
+    else if (dow==2)
+        dow = "火曜日";
+    else if (dow==3)
+        dow = "水曜日";
+    else if (dow==4)
+        dow = "木曜日";
+    else if (dow==5)
+        dow = "金曜日";
+    else if (dow==6)
+        dow = "土曜日";  
+    var day = time.getDate();
+    var month = time.getMonth()+1;
+    var year = time.getFullYear();
+    var hr = time.getHours();
+    var min = time.getMinutes();
+    var sec = time.getSeconds();
+    day = ((day < 10) ? "0" : "") + day;
+    month = ((month < 10) ? "0" : "") + month;
+    hr = ((hr < 10) ? "0" : "") + hr;
+    min = ((min < 10) ? "0" : "") + min;
+    sec = ((sec < 10) ? "0" : "") + sec;
+    return hr + ":" + min　+" "+ year + "/" + month + "/" + day + " " + dow;
+    }
+    function showTime(){
+        var vnclock = document.getElementById("vnclock");
+        if (vnclock != null)
+            vnclock.innerHTML = getVNTime();
+        setTimeout("showTime()", 1000);
+    }
+</script>
+<body id="backgroud" background="./image/backgroud.jpg">
+    <header id="header1">
+        <div>
+            <div id="clock1"><span id="vnclock"></span></div>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <img id="user2" src="./image/user.jpg" title="青木大介">
+                        <ul class="cap_2">
+                            <li><a href="../account/account.html">マイアカウント</a></li>
+                            <li><a href="../setting/setting.html">設定</a></li>
+                            <li><a href="#">ログアウト</a></li> 
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div align="center">
+                <img id="line1" src="./image/line.PNG">
+            </div>
+        </div>
+    </header>
+    <section>
+        <article>
+            <div>
+                <div id="naiyo">
+                    <!--mutili viewを使って。tab1のひらがな、tab2のN5、tab3のn4、他のtabのテスト結果-->
+                    <!--ここはたくさん情報を保存するので、datagirt viewで使って-->
+                </div>
+            </div>
+        </article>
+        <div id="box">
+            <div id="application">
+                <table align="center">
+                    <tr>
+                        <td>
+                            <div class="nav1">
+                                <ul>
+                                    <li>
+                                        <div class="imgless"><a href="../app1/app1.html"><img src="./image/less1.png" title="トレーニング"></a></div>
+                                        <ul class="cap_2">
+                                            <li><a href="../hinakata/hinakata.html">ひらがな＆カタカナ</a></li>
+                                            <li><a href="../jlptn5/jptn5.html">N5</a></li>
+                                            <li><a href="../jlptn4/jlptn4.html">N4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="imgless"><a href="../app2/app2.html" target="_top" title="テスト"><img src="./image/less2.png"></a></div>
+                        </td>
+                        <td>
+                            <div class="imgless"><a href="./app3.html" target="_top" title="成績"><img src="./image/less3.png"></a></div>
+                        </td>
+                        <td>
+                            <div class="imgless"><a href="../app4/app4.html" target="_top" title="辞書"><img src="./image/less4.png"></a></div>
+                        </td>
+                        <td>
+                            <div class="imgless"><a href="../index/index.html" target="_top" title="ホーム"><img src="./image/home.png"></a></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+</boby>
+</html>
